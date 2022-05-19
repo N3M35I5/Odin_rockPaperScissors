@@ -53,12 +53,12 @@ function oneRound(player,computer)//win=1 lose=-1 draw=0
 
 function game()
 {
-    let playerInput = prompt("Choose Rock, Paper, Scissor").toLowerCase()
-    let computerInput=computerPlay()
     let playerScore=0
     let computerScore=0
     for(let i=0;i<5;i++)
     {
+        let playerInput = prompt("Choose Rock, Paper, Scissor").toLowerCase()
+        let computerInput=computerPlay()
         result=oneRound(playerInput,computerInput)
         if(result==0)
         {
