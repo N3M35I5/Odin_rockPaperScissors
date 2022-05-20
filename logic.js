@@ -66,13 +66,13 @@ function game()
         }
         else if(result==1)
         {
-            console.log('You Win! '+playerInput+' beats '+computerInput)
+            console.log('You Win! '+playerInput[0].toUpperCase()+playerInput.slice(1)+' beats '+computerInput[0].toUpperCase()+computerInput.slice(1))
             //console.log('You Win! '+playerInput[0].toUpperCase()+playerInput[1,-1]+' beats '+computerInput)
             playerScore+=1
         }
         else if(result==-1)
         {
-            console.log('You Lose! '+computerInput+' beats '+playerInput)
+            console.log('You Lose! '+computerInput[0].toUpperCase()+computerInput.slice(1)+' beats '+playerInput[0].toUpperCase()+playerInput.slice(1))
             computerScore+=1
         }
     }
@@ -83,6 +83,10 @@ function game()
     else if (computerScore<playerScore)
     {
         console.log('You Win with '+playerScore+' points')
+    }
+    else
+    {
+        console.log("It's a draw!")
     }
 }
 
